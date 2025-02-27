@@ -23,7 +23,7 @@ public class mainController {
 
     @GetMapping("/")
     public String index() {
-        return "Bienvenido a la aplicacion .... ";
+        return "Bienvenido a la aplicación .... ";
     }
 
     @GetMapping("/Home")
@@ -56,6 +56,14 @@ public class mainController {
         return ResponseEntity.ok(response);
     }
 
+//    ==========================================================================================================
+//  PROBANDO CONTROLADOR PARA Control de ERRORES y EXCEPPCIONES
+    @GetMapping(value = "/throwException")
+    public void throwException() {
+        throw new IllegalArgumentException("Soy un Mensaje de Error, que proviene del controlador.");
+    }
+
+//    ==========================================================================================================
 //  PROBANDO CONTROLADOR PARA
 
 }
